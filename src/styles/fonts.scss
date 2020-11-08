@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url("../assets/fonts/Roboto.ttf") format("truetype"),
+    url("../assets/fonts/Roboto.woff") format("woff"),
+    url("../assets/fonts/Roboto.woff2") format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url("../assets/fonts/Robotomedium.ttf") format("truetype"),
+    url("../assets/fonts/Robotomedium.woff") format("woff"),
+    url("../assets/fonts/Robotomedium.woff2") format("woff2");
+  font-weight: 500;
+}

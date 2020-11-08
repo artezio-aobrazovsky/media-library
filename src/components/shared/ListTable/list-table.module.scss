@@ -1,0 +1,22 @@
+.headingRow {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.sortIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 5px;
+
+  width: 1em;
+  height: 1em;
+  background-image: url("../../../assets/sort.svg");
+  background-size: contain;
+}
+
+.row {
+  border: 1px solid;
+}
