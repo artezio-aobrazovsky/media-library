@@ -1,3 +1,7 @@
+.listTable {
+  margin: 0 auto;
+}
+
 .headingRow {
   position: relative;
 
@@ -18,5 +22,13 @@
 }
 
 .row {
-  border: 1px solid;
+  height: 50px;
+  font-size: 14px;
+}
+
+tbody {
+  .cell {
+    border: 1px solid #27555f;
+    border-radius: 5px;
+  }
 }

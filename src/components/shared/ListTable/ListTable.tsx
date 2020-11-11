@@ -19,17 +19,8 @@ type SortingInfo = {
   field: string;
 };
 
-type Filters<T> = {
-  [key in keyof T]: string;
-};
-
 const ListTable = <T extends object>(props: Props<T>) => {
   const { datasource, colConfig } = props;
-
-  // const [filters, setFilters] = useState(colConfig.reduce((config: ColumnConfig<T>, accum: Filters<T> ) => {
-  //   accum[config.field] = '';
-  //   return accum;
-  // }, {}))
   const [filteredDatasource, setFilteredDatasource] = useState(datasource);
   const [filters, setFilters] = useState({});
   const [sortingInfo, setSortingInfo] = useState<SortingInfo>({
@@ -78,12 +69,12 @@ const ListTable = <T extends object>(props: Props<T>) => {
     );
   }, [filters, datasource]);
 
-  const rows = filteredDatasource.map((row) => (
-    <Row rowData={row} colConfig={colConfig} />
+  const rows = filteredDatasource.map((row, index) => (
+    <Row rowData={row} colConfig={colConfig} key={index} />
   ));
 
   return (
-    <table>
+    <table className={classes.listTable}>
       <thead>
         <HeadingRow
           colConfig={colConfig}

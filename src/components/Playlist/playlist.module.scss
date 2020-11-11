@@ -1,5 +1,12 @@
+@import "../../styles/mixins";
+
 .playlist {
-  display: flex;
-  justify-content: center;
+  height: 300px;
+  overflow: auto;
+
   font-size: 14px;
+}
+
+.spinner {
+  @include spinner;
 }

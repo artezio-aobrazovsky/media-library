@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Server
+To start server run `npm run serve` in 'server/functions' folder
+
 ## Available Scripts
 
 In the project directory, you can run:

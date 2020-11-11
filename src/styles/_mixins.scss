@@ -1,0 +1,42 @@
+@import "variables";
+
+@mixin spinner {
+  position: relative;
+  width: 36px;
+  height: 28px;
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 1px transparent;
+  }
+
+  &::before {
+    border-top-color: $primary;
+    animation: spin 2.4s cubic-bezier(0.41, 0.26, 0.2, 0.62);
+    animation-iteration-count: infinite;
+  }
+
+  &::after {
+    animation: spin 2.4s cubic-bezier(0.51, 0.09, 0.21, 0.8);
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
